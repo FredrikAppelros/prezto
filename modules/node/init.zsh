@@ -7,8 +7,9 @@
 #
 
 # Load manually installed NVM into the shell session.
-if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
-  source "$HOME/.nvm/nvm.sh"
+export NVM_DIR=$(cd "$HOME/.nvm" && pwd -P)
+if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+  source "$NVM_DIR/nvm.sh"
 
 # Load package manager installed NVM into the shell session.
 elif (( $+commands[brew] )) && \
