@@ -16,3 +16,4 @@ else
   prompt "$prompt_argv[@]"
 fi
 unset prompt_argv
+setopt prompt_sp
